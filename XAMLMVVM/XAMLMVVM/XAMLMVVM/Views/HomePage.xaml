@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XAMLMVVM.Views.HomePage">
+    <ContentPage.BindingContext>
+        <viewModels:HomePageViewModel
+            xmlns:viewModels="clr-namespace:XAMLMVVM.ViewModels"
+            />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            HorizontalOptions="Fill"
+            VerticalOptions="Center">
+            <Entry
+                Placeholder="請輸入您的名字"
+                />
+            <Label
+                Text="{Binding ClickedButtonMessage}"
+                />
+            <Button
+                Text="確定"
+                Command="{Binding ButtonTapCommand}"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
