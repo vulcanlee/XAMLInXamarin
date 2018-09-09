@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             x:Class="XAMLIntroduction.Views.MainPage"
+             Title="{Binding Title}" BackgroundColor="#44FF2211">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Entry x:Name="entry" Placeholder="請輸入任何文字"/>
+                <Label Text="{Binding Path=Text, Source={x:Reference entry}}" 
+                       TextColor="Red">
+                    <Label.FontSize>Large</Label.FontSize>
+                </Label>
+            </StackLayout>
+            <Button
+                Grid.Row="1"
+                Text="確定"
+                >
+                <Button.Behaviors>
+                    <behavior:EventToCommandBehavior
+                        EventName="Clicked" Command="{Binding BtnCommand}"/>
+                </Button.Behaviors>
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
