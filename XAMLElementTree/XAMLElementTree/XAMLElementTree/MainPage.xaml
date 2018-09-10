@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
-             x:Class="XAMLIntroduction.Views.MainPage"
-             Title="{Binding Title}" BackgroundColor="#44FF2211">
+             xmlns:local="clr-namespace:XAMLElementTree"
+             x:Class="XAMLElementTree.MainPage"
+             Title="XAML 項目樹狀結構">
 
     <ContentPage.Content>
         <Grid>
@@ -19,15 +19,14 @@
                 </Label>
             </StackLayout>
             <Button
-                xmlns:anotherBehavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
                 Grid.Row="1"
                 Text="確定"
+                x:Name="btnOK"
+                Clicked="btnOK_Clicked"
                 >
-                <Button.Behaviors>
-                    <behavior:EventToCommandBehavior
-                        EventName="Clicked" Command="{Binding BtnCommand}"/>
-                </Button.Behaviors>
+                
             </Button>
         </Grid>
     </ContentPage.Content>
+
 </ContentPage>
