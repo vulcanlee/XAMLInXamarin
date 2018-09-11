@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarkupExt"
+             x:Class="MarkupExt.MainPage">
+
+    <ContentPage.Resources>
+        <x:Double x:Key="Size">28</x:Double>
+        <x:Boolean x:Key="IsShow">True</x:Boolean>
+        <x:String x:Key="Message">使用 28 點的字體大小</x:String>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="{StaticResource Message}"
+               FontSize="{x:StaticResource Size}"
+               IsVisible="{x:StaticResource IsShow}"/>
+        <ListView Margin="10">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:Object}">
+                    <x:String>Xamarin</x:String>
+                    <x:String>Xamarin.Forms</x:String>
+                    <x:String>C#</x:String>
+                    <x:String>Android</x:String>
+                    <x:String>iOS</x:String>
+                    <x:String>UWP</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
