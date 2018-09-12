@@ -11,7 +11,7 @@ namespace MarkupExt
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MarkupExtensionSamplePage();
         }
 
         protected override void OnStart()

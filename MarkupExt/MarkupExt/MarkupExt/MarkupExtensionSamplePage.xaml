@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarkupExt"
+             x:Class="MarkupExt.MarkupExtensionSamplePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label FontSize="30">
+                <Label.TextColor>
+                    <OnPlatform
+                        x:TypeArguments="Color">
+                        <On Platform="iOS" Value="Blue" />
+                        <On Platform="Android" Value="Pink" />
+                        <On Platform="UWP" Value="Green" />
+                    </OnPlatform>
+                </Label.TextColor>
+                <Label.Text>
+                    <OnPlatform 
+                        x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="我是 iOS" />
+                        <On Platform="Android" Value="我是 Android" />
+                        <On Platform="UWP" Value="我是 UWP" />
+                    </OnPlatform>
+                </Label.Text>
+            </Label>
+            
+            <Label Text="{x:Static local:MyMessage.Msg}" FontSize="30">
+                <Label.TextColor>
+                    <Color>
+                        <x:Arguments>
+                            <x:Double>0.25</x:Double>
+                            <x:Double>0.5</x:Double>
+                            <x:Double>0.75</x:Double>
+                        </x:Arguments>
+                    </Color>
+                </Label.TextColor>
+                <Label.BackgroundColor>
+                    <Color x:FactoryMethod="FromRgba">
+                        <x:Arguments>
+                            <x:Int32>192</x:Int32>
+                            <x:Int32>75</x:Int32>
+                            <x:Int32>150</x:Int32>
+                            <x:Int32>128</x:Int32>
+                        </x:Arguments>
+                    </Color>
+                </Label.BackgroundColor>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
