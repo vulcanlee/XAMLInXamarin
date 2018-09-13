@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BindableObjectSample"
+             x:Class="BindableObjectSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <local:CustomLabel 
+            x:Name="label"
+            Text="{Binding CustomText, Source={x:Reference label}}" 
+            CustomText="{Binding Title}"
+            HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+            TextColor="White"
+            BackgroundColor="LightPink"
+            FontSize="24"/>
+        <Button x:Name="btnSetValue" Text="呼叫 SetValue 變更屬性值"
+                Clicked="btnSetValue_Clicked"
+                />
+        <Button x:Name="btnDirect" Text="直接變更屬性值"
+                Clicked="btnDirect_Clicked"
+                />
+        <Button x:Name="btnViewModel" Text="透過 檢視模型 資料綁定"
+                Clicked="btnViewModel_Clicked"
+                />
+    </StackLayout>
+
+</ContentPage>
