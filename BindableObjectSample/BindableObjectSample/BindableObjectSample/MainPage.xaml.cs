@@ -13,13 +13,28 @@ namespace BindableObjectSample
         public MainPage()
         {
             InitializeComponent();
-            this.PropertyChanging += DoPropertyChanged;
-            
+            PropertyChanging += DoPropertyChanging;
+            PropertyChanged += DoPropertyChanged;
+            BindingContextChanged += DoBindingContextChanged;
+
+            BindingContext = new MainPageViewModel();
+            label.PropertyChanged += DoPropertyChanged;
         }
 
-        private void DoPropertyChanged(object sender, Xamarin.Forms.PropertyChangingEventArgs e)
+        private void DoBindingContextChanged(object sender, EventArgs e)
         {
-            Console.WriteLine($"==>{e.PropertyName}");
+            Console.WriteLine($"這個頁面的綁定內容 BindingContext 已經產生異動");
+            Console.WriteLine($"現在 綁定內容 BindingContext 的屬性值屬於 {BindingContext.GetType().Name} 型別");
+        }
+
+        private void DoPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            Console.WriteLine($"這個屬性 ==>{e.PropertyName} 的值，已經產生異動");
+        }
+
+        private void DoPropertyChanging(object sender, Xamarin.Forms.PropertyChangingEventArgs e)
+        {
+            Console.WriteLine($"這個屬性 ==>{e.PropertyName} 的值，準備產生異動");
         }
 
         private void btnSetValue_Clicked(object sender, EventArgs e)
@@ -37,11 +52,5 @@ namespace BindableObjectSample
             var fooVM = this.BindingContext as MainPageViewModel;
             fooVM.Title = "透過 檢視模型 變更文字標籤文字內容";
         }
-
-        //private void DoPropertyChanged(object sender, PropertyChangedEventArgs e)
-        //{
-        //    Console.WriteLine($"==>{e.PropertyName}");
-        //}
-
     }
 }

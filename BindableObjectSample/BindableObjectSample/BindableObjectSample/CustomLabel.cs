@@ -13,7 +13,7 @@ namespace BindableObjectSample
                 typeof(string), // 回傳類型 
                 typeof(CustomLabel), // 宣告類型 
                 "", // 預設值 
-                defaultBindingMode: BindingMode.TwoWay,
+                //defaultBindingMode: BindingMode.TwoWay,
                 propertyChanged: OnCustomTextChanged  // 屬性值異動時，要執行的事件委派方法
             );
 
