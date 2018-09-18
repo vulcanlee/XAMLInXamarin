@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StackLayoutLab1"
+             x:Class="StackLayoutLab1.MainPage"
+             BackgroundColor="LightYellow"
+             x:Name="ThisPage">
+
+    <!--版面配置存在的目的：安排與分配在版面配置裡面的 檢視 (控制項或版面配置) 所要顯示的位置與佔據的空間大小
+    每個 檢視 都會依據當時設定的條件，自動計算與配置佔據螢幕的空間位置與大小-->
+    <StackLayout
+        x:Name="ThisStackLayout"
+        HorizontalOptions="Center" 
+        BackgroundColor="LightPink"
+        >
+        <Label Text="StackLayout 有設定 垂直 LayoutOptions"
+               HorizontalOptions="Start" VerticalOptions="Start"
+               BackgroundColor="Lime"
+               TextColor="Black"/>
+        <Label Text="ContentPage 高度" 
+               HorizontalOptions="Start" VerticalOptions="Start"
+               BackgroundColor="DeepSkyBlue"
+               TextColor="White"/>
+        <Label Text="{Binding Width, Source={Reference ThisPage}}"
+               BackgroundColor="LightGreen"/>
+        <Label Text="ContentPage 寬度" 
+               HorizontalOptions="Center" VerticalOptions="Start"
+               BackgroundColor="DeepSkyBlue"
+               TextColor="White"/>
+        <Label Text="{Binding Width, Source={Reference ThisPage}}"
+               BackgroundColor="LightGreen"/>
+        <Label Text="StackLayout 高度"
+               HorizontalOptions="End" VerticalOptions="Start"
+               BackgroundColor="DeepSkyBlue"
+               TextColor="White"/>
+        <Label Text="{Binding Height, Source={Reference ThisStackLayout}}"
+               BackgroundColor="LightGreen"/>
+        <Label Text="StackLayout 寬度" 
+               HorizontalOptions="Fill" VerticalOptions="Start"
+               BackgroundColor="DeepSkyBlue"
+               TextColor="White"/>
+        <Label Text="{Binding Width, Source={Reference ThisStackLayout}}"
+               BackgroundColor="LightGreen"/>
+    </StackLayout>
+
+</ContentPage>
