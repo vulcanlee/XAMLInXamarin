@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ColorName"
+             x:Class="ColorName.MainPage">
+
+    <!--顯示 Xamarin.Forms 具有顏色名稱所顯示的實際顏色效果-->
+    <ListView
+        x:Name="list"
+        ItemsSource="{Binding AllColors}"
+        HasUnevenRows="True"
+        SeparatorVisibility="None"
+        >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <BoxView
+                            WidthRequest="60" HeightRequest="30"
+                            Color="{Binding Color}"/>
+                        <BoxView
+                            Color="White"
+                            WidthRequest="20"/>
+                        <Label
+                            Text="{Binding Name}"
+                            TextColor="{Binding Color}"
+                            BackgroundColor="{Binding BackgroundColor}"
+                            FontSize="24"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
