@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackLayoutLab2.Sample3Page">
+
+    <!--使用 檢視 內提供的 LayoutOptions 的 對齊 / 擴充 設定選項
+    了解這兩個設定選項在 Xamarin.Forms 表現出來的效果
+    這裡是僅有使用 Fill ，請與單獨使用 FillAndExpand 的設定情境下做比較 -->
+    <StackLayout>
+        <Label Text="垂直文字標籤1" BackgroundColor="LightBlue"
+               HorizontalOptions="Start" VerticalOptions="Fill" />
+        <Label Text="垂直文字標籤2"  BackgroundColor="LightCoral"
+           HorizontalOptions="Center" VerticalOptions="Fill" />
+        <Label Text="垂直文字標籤3"  BackgroundColor="LightGreen"
+           HorizontalOptions="End" VerticalOptions="Fill" />
+        <StackLayout
+            Orientation="Horizontal">
+            <Label Text="水平文字標籤1" BackgroundColor="LimeGreen"
+                   HorizontalOptions="Fill" VerticalOptions="Center" />
+            <Label Text="水平文字標籤2"  BackgroundColor="LightPink"
+                   HorizontalOptions="Fill" VerticalOptions="Center" />
+            <Label Text="水平文字標籤3"  BackgroundColor="LightSalmon"
+                   HorizontalOptions="Fill" VerticalOptions="Center" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
