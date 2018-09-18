@@ -11,7 +11,7 @@ namespace StackLayoutLab1
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Sample2Page();
         }
 
         protected override void OnStart()

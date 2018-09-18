@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:StackLayoutLab1"
-             x:Class="StackLayoutLab1.MainPage"
+             x:Class="StackLayoutLab1.Sample2Page"
              BackgroundColor="LightYellow"
              x:Name="ThisPage">
 
@@ -10,7 +9,7 @@
     每個 檢視 都會依據當時設定的條件，自動計算與配置佔據螢幕的空間位置與大小-->
     <StackLayout
         x:Name="ThisStackLayout"
-        HorizontalOptions="Center" 
+        HorizontalOptions="Center" VerticalOptions="Center"
         BackgroundColor="LightPink"
         >
         <Label Text="StackLayout 有設定 垂直 LayoutOptions"
