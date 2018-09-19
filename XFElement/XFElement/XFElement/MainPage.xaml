@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFElement"
+             x:Class="XFElement.MainPage">
+
+    <StackLayout
+        x:Name="stacklayout"
+        >
+        <Label x:Name="label1" ClassId="ID1" Text="文字標籤1"/>
+        <Label x:Name="label2" ClassId="ID2" Text="文字標籤2"/>
+        <Button x:Name="button" Text="Element 使用範例" Clicked="button_Clicked"/>
+        <Button x:Name="buttonChildAdd" Text="子項目加入了" Clicked="buttonChildAdd_Clicked" />
+        <Button x:Name="buttonChildRemove" Text="子項目移除了" Clicked="buttonChildRemove_Clicked" />
+        <Button x:Name="buttonFindByName" Text="尋找特定 XAML 項目用法" Clicked="buttonFindByName_Clicked" />
+        <ListView
+            x:Name="lv"
+            HasUnevenRows="True" SeparatorVisibility="None"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            x:Name="stackLayout" ClassId="{Binding ViewCellClassId}"
+                            >
+                            <Label x:Name="NodeName" Text="{Binding Name}"/>
+                            <Label Text="{Binding ClassId , Source={Reference stackLayout}}"/>
+                            <Label Text="{Binding StyleId , Source={Reference stackLayout}}"/>
+                            <Label x:Name="labelChange" Text="..." ClassId="{Binding LabelClassId}" />
+                            <Button x:Name="btnChangeText" ClassId="{Binding ButtonClassId}"
+                                    Text="變更顯示文字" Clicked="btnChangeText_Clicked"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
