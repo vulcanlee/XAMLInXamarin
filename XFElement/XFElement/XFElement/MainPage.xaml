@@ -21,7 +21,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout
-                            x:Name="stackLayout" ClassId="{Binding ViewCellClassId}"
+                            x:Name="stackLayout" ClassId="{Binding StackLayoutClassId}"
                             >
                             <Label x:Name="NodeName" Text="{Binding Name}"/>
                             <Label Text="{Binding ClassId , Source={Reference stackLayout}}"/>
