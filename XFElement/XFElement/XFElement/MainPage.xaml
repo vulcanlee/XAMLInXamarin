@@ -19,7 +19,7 @@
             >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <ViewCell x:Name="viewCell">
                         <StackLayout
                             x:Name="stackLayout" ClassId="{Binding StackLayoutClassId}"
                             >
