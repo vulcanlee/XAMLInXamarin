@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VisualElementColor"
+             x:Class="VisualElementColor.MainPage"
+             BackgroundColor="Red">
+
+    <StackLayout>
+        <Label x:Name="labelDefault"
+               Text="預設背景顏色，檢測 Background 屬性值是否可以繼承" 
+               FontSize="24"/>
+        <Label Text="背景顏色色碼為 LightPink" 
+               BackgroundColor="LightPink"
+               FontSize="24"/>
+        <Label Text="背景顏色色碼為 #C9D" 
+               BackgroundColor="#C9D"
+               FontSize="24"/>
+        <Label Text="背景顏色色碼為 #6DDE47" 
+               BackgroundColor="#6DDE47"
+               FontSize="24"/>
+        <Label Text="背景顏色色碼為 #aaFFFFFF" 
+               TextColor="Black"
+               BackgroundColor="#aaFFFFFF"
+               FontSize="24"/>
+        <Label Text="背景顏色色碼為 #55000000，文字顏色為 White" 
+               TextColor="White"               
+               BackgroundColor="#55000000"
+               FontSize="24"/>
+        <BoxView Color="#FFF"
+                 WidthRequest="100" HeightRequest="100"/>
+    </StackLayout>
+
+</ContentPage>
