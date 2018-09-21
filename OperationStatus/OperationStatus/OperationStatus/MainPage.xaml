@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OperationStatus"
+             x:Class="OperationStatus.MainPage">
+
+    <StackLayout>
+        <Entry x:Name="entry1"
+               Placeholder="點選這裡，看看焦點屬性是否有異動"/>
+        <Label Text="{Binding IsFocused,StringFormat='IsFocused={0}', Source={Reference entry1}}"/>
+        <Entry x:Name="entry2"
+               Placeholder="點選這裡，看看焦點屬性是否有異動(停用中)"
+               IsEnabled="False"/>
+        <Label Text="{Binding IsFocused,StringFormat='IsFocused={0}', Source={Reference entry2}}"/>
+        <Entry x:Name="entry3"
+               InputTransparent="True"
+               Text="InputTransparent=True"/>
+        <Label Text="{Binding IsFocused,StringFormat='IsFocused={0}', Source={Reference entry3}}"/>
+        <Label x:Name="label1"
+               BackgroundColor="LightGreen"
+               FontSize="24"
+               Text="這裡是用來檢測 InputTransparent 屬性"/>
+        <Label Text="{Binding IsFocused,StringFormat='IsFocused={0}', Source={Reference label1}}"/>
+        <Button x:Name="buttonIsVisable"
+                Text="顯示與隱藏 BoxView"
+                Clicked="buttonIsVisable_Clicked"/>
+        <BoxView x:Name="boxview1"
+                 Color="Red"
+                 WidthRequest="100" HeightRequest="100"/>
+    </StackLayout>
+
+</ContentPage>
