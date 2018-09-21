@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VisualElementSize"
+             x:Class="VisualElementSize.MainPage"
+             BackgroundColor="LightYellow">
+
+    <StackLayout x:Name="stacklayout"
+        HorizontalOptions="Center" VerticalOptions="Center"
+        BackgroundColor="LightGreen"
+        >
+        <Label Text="{Binding X, StringFormat='StackLayout 屬性 X :{0}', Source={Reference stacklayout}}"/>
+        <Label Text="{Binding Y, StringFormat='StackLayout 屬性 Y :{0}', Source={Reference stacklayout}}"/>
+        <Label Text="{Binding WidthRequest, StringFormat='StackLayout 屬性 WidthRequest :{0}', Source={Reference stacklayout}}"/>
+        <Label Text="{Binding HeightRequest, StringFormat='StackLayout 屬性 HeightRequest :{0}', Source={Reference stacklayout}}"/>
+        <Label Text="{Binding Width, StringFormat='StackLayout 屬性 Width :{0}', Source={Reference stacklayout}}"/>
+        <Label Text="{Binding Height, StringFormat='StackLayout 屬性 Height :{0}', Source={Reference stacklayout}}"/>
+        <Label x:Name="labelA"
+               Text="labelA 檢測文字的區域1"  BackgroundColor="LightBlue"
+               HorizontalOptions="Start" VerticalOptions="Start"               
+               FontSize="24"
+               />
+        <Label Text="{Binding X, StringFormat='labelA 屬性 X :{0}', Source={Reference labelA}}"/>
+        <Label Text="{Binding Y, StringFormat='labelA 屬性 Y :{0}', Source={Reference labelA}}"/>
+        <Label Text="{Binding WidthRequest, StringFormat='labelA 屬性 WidthRequest :{0}', Source={Reference labelA}}"/>
+        <Label Text="{Binding HeightRequest, StringFormat='labelA 屬性 HeightRequest :{0}', Source={Reference labelA}}"/>
+        <Label Text="{Binding Width, StringFormat='labelA 屬性 Width :{0}', Source={Reference labelA}}"/>
+        <Label Text="{Binding Height, StringFormat='labelA 屬性 Height :{0}', Source={Reference labelA}}"/>
+
+        <Label x:Name="labelB"
+               Text="labelB 檢測文字的區域2 檢測文字的區域2"  BackgroundColor="LightPink"
+               HorizontalOptions="Start" VerticalOptions="Start"
+               WidthRequest="300" HeightRequest="50"
+               FontSize="24"
+               />
+        <Label Text="{Binding X, StringFormat='labelB 屬性 X :{0}', Source={Reference labelB}}"/>
+        <Label Text="{Binding Y, StringFormat='labelB 屬性 Y :{0}', Source={Reference labelB}}"/>
+        <Label Text="{Binding WidthRequest, StringFormat='labelB 屬性 WidthRequest :{0}', Source={Reference labelB}}"/>
+        <Label Text="{Binding HeightRequest, StringFormat='labelB 屬性 HeightRequest :{0}', Source={Reference labelB}}"/>
+        <Label Text="{Binding Width, StringFormat='labelB 屬性 Width :{0}', Source={Reference labelB}}"/>
+        <Label Text="{Binding Height, StringFormat='labelB 屬性 Height :{0}', Source={Reference labelB}}"/>
+    </StackLayout>
+
+</ContentPage>
