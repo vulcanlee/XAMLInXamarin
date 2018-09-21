@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AnimationAll"
+             x:Class="AnimationAll.MainPage"
+             BackgroundColor="LightGray">
+
+    <!--這個專案將會讓您操作 VisualElement 上的一些轉換行為，例如：平移、縮放、旋轉
+    https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/-->
+
+    <StackLayout>
+        <Frame x:Name="frame" 
+               HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand" OutlineColor="Accent">
+            <Label Text="Vulcan Lee" FontSize="Large" />
+        </Frame>
+        <StackLayout
+            HorizontalOptions="Fill" VerticalOptions="End">
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="TranslationX"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                    Minimum="-200" Maximum="200" Value="{Binding Source={x:Reference frame}, Path=TranslationX}" />
+                <Label Text="TranslationY"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                        Minimum="-200" Maximum="200" Value="{Binding Source={x:Reference frame}, Path=TranslationY}" />
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="AnchorX"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                    Minimum="0" Maximum="1" Value="{Binding Source={x:Reference frame}, Path=AnchorX}" />
+                <Label Text="AnchorY"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                    Minimum="0" Maximum="1" Value="{Binding Source={x:Reference frame}, Path=AnchorY}" />
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Scale"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                    Minimum="-10" Maximum="10" Value="{Binding Source={x:Reference frame}, Path=Scale}" />
+                <Label Text="Rotation"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                    Minimum="0" Maximum="360" Value="{Binding Source={x:Reference frame}, Path=Rotation}" />
+
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="RotationX"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                    Maximum="360" Value="{Binding Source={x:Reference frame}, Path=RotationX}" />
+                <Label Text="RotationY"/>
+                <Slider HorizontalOptions="FillAndExpand"
+                    Maximum="360" Value="{Binding Source={x:Reference frame}, Path=RotationY}" />
+
+            </StackLayout>
+            <Label Text=""/>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>
