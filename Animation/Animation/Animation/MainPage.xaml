@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Animation"
+             x:Class="Animation.MainPage">
+
+    <StackLayout>
+        <Label x:Name="label1" Text="預設錨點資訊"
+               BackgroundColor="LightBlue" FontSize="18"
+               VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Label Text="{Binding AnchorX, StringFormat='AnchorX={0}', Source={Reference label1}}"/>
+        <Label Text="{Binding AnchorY, StringFormat='AnchorY={0}', Source={Reference label1}}"/>
+        <Label Text="{Binding X, StringFormat='AnchorX={0}', Source={Reference label1}}"/>
+        <Label Text="{Binding Y, StringFormat='AnchorY={0}', Source={Reference label1}}"/>
+        <Label x:Name="label2" Text="平移 x:100, y:-20"
+               TranslationX="100" TranslationY="-20"
+               BackgroundColor="LightBlue" FontSize="18"
+               VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Label Text="{Binding X, StringFormat='AnchorX={0}', Source={Reference label2}}"/>
+        <Label Text="{Binding Y, StringFormat='AnchorY={0}', Source={Reference label2}}"/>
+        <Label x:Name="label3" Text="Z軸 -30度 旋轉 x:150, y:-20"
+               TranslationX="150" TranslationY="-20"
+               Rotation="-30"
+               BackgroundColor="LightBlue" FontSize="18"
+               VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Label Text="{Binding X, StringFormat='AnchorX={0}', Source={Reference label3}}"/>
+        <Label Text="{Binding Y, StringFormat='AnchorY={0}', Source={Reference label3}}"/>
+        <Label x:Name="label4" Text="放大兩倍"
+               Scale="2"
+               TranslationX="150" TranslationY="20"
+               VerticalTextAlignment="Center"
+               BackgroundColor="LightBlue" FontSize="18"
+               VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Label Text="{Binding X, StringFormat='AnchorX={0}', Source={Reference label4}}"/>
+        <Label Text="{Binding Y, StringFormat='AnchorY={0}', Source={Reference label4}}"/>
+        <Label x:Name="label5" Text="x軸旋轉 50度，y軸旋轉 10度"
+               RotationX="50" RotationY="10"
+               TranslationX="150" TranslationY="20"
+               VerticalTextAlignment="Center"
+               BackgroundColor="LightBlue" FontSize="18"
+               VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Label Text="{Binding X, StringFormat='AnchorX={0}', Source={Reference label5}}"/>
+        <Label Text="{Binding Y, StringFormat='AnchorY={0}', Source={Reference label5}}"/>
+        <Label x:Name="label6" Text="Z軸 10度 旋轉"
+               Margin="20"
+               Rotation="10"
+               BackgroundColor="LightBlue" FontSize="18"
+               VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Label x:Name="label7" Text="Z軸 10度 旋轉，AnchorX=1, AnchorY=1"
+               Margin="20"
+               AnchorX="1" AnchorY="1"
+               Rotation="10"
+               BackgroundColor="LightBlue" FontSize="18"
+               VerticalOptions="Start" HorizontalOptions="Start"/>
+    </StackLayout>
+
+</ContentPage>
