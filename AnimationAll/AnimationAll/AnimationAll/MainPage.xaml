@@ -14,6 +14,22 @@
                VerticalOptions="CenterAndExpand" OutlineColor="Accent">
             <Label Text="Vulcan Lee" FontSize="Large" />
         </Frame>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding TranslationX,StringFormat='TranslationX={0}',Source={Reference frame}}"/>
+            <Label Text="{Binding TranslationY,StringFormat='TranslationY={0}',Source={Reference frame}}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding AnchorX,StringFormat='AnchorX={0}',Source={Reference frame}}"/>
+            <Label Text="{Binding AnchorY,StringFormat='AnchorY={0}',Source={Reference frame}}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding Rotation,StringFormat='Rotation={0}',Source={Reference frame}}"/>
+            <Label Text="{Binding Scale,StringFormat='Scale={0}',Source={Reference frame}}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding RotationX,StringFormat='RotationX={0}',Source={Reference frame}}"/>
+            <Label Text="{Binding RotationY,StringFormat='RotationY={0}',Source={Reference frame}}"/>
+        </StackLayout>
         <StackLayout
             HorizontalOptions="Fill" VerticalOptions="End">
             <StackLayout
