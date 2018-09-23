@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ViewClass"
              x:Class="ViewClass.MainPage"
-             BackgroundColor="Gray">
+             BackgroundColor="Gray"
+             x:Name="ThisPage"
+             >
 
     <Grid>
         <!-- Place new controls here -->
@@ -31,6 +33,20 @@
         <Label Text="左下偏移文字" HorizontalOptions="Start" VerticalOptions="End"
                FontSize="Large" TextColor="LightBlue"
                Margin="30,50"/>
+        <Label x:Name="labelScreen" HorizontalOptions="Center" VerticalOptions="Center"
+               FontSize="Large" TextColor="LightYellow"
+               Margin="0,100,0,0"/>
+        <StackLayout Margin="0,150,0,0" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Horizontal">
+            <Label HorizontalOptions="Start" VerticalOptions="Start"
+               FontSize="Large" TextColor="LightYellow"
+                   Text="{Binding Width, Source={Reference ThisPage},StringFormat='螢幕邏輯畫素 W {0:F2} x '}"/>
+            <Label HorizontalOptions="Start" VerticalOptions="Start"
+               FontSize="Large" TextColor="LightYellow"
+                   Text="{Binding Height, Source={Reference ThisPage},StringFormat='H {0:F2}'}"/>
+        </StackLayout>
+        <Label x:Name="labelScreenDensity" HorizontalOptions="Center" VerticalOptions="Center"
+               FontSize="Large" TextColor="LightYellow"
+               Margin="0,200,0,0"/>
     </Grid>
 
 </ContentPage>

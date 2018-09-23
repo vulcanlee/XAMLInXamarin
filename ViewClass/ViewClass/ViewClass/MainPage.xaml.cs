@@ -12,6 +12,9 @@ namespace ViewClass
         public MainPage()
         {
             InitializeComponent();
+
+            labelScreen.Text = $"螢幕真實畫素 W {Xamarin.Essentials.DeviceDisplay.ScreenMetrics.Width} x H {Xamarin.Essentials.DeviceDisplay.ScreenMetrics.Height}";
+            labelScreenDensity.Text = $"螢幕縮放比 {Xamarin.Essentials.DeviceDisplay.ScreenMetrics.Density}";
         }
     }
 }
