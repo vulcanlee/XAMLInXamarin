@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ViewClass"
+             x:Class="ViewClass.MainPage"
+             BackgroundColor="Gray">
+
+    <Grid>
+        <!-- Place new controls here -->
+        <Label Text="左上方文字" HorizontalOptions="Start" VerticalOptions="Start"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="右上方文字" HorizontalOptions="End" VerticalOptions="Start"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="左下方文字" HorizontalOptions="Start" VerticalOptions="End"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="右下方文字" HorizontalOptions="End" VerticalOptions="End"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="上方中間文字" HorizontalOptions="Center" VerticalOptions="Start"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="左邊中間文字" HorizontalOptions="Start" VerticalOptions="Center"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="右邊中間文字" HorizontalOptions="End" VerticalOptions="Center"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="下方中間文字" HorizontalOptions="Center" VerticalOptions="End"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="中間文字" HorizontalOptions="Center" VerticalOptions="Center"
+               FontSize="Large" TextColor="Pink"/>
+        <Label Text="左上偏移文字" HorizontalOptions="Start" VerticalOptions="Start"
+               Margin="30,50,0,0"
+               FontSize="Large" TextColor="LightBlue"/>
+        <Label Text="左下偏移文字" HorizontalOptions="Start" VerticalOptions="End"
+               FontSize="Large" TextColor="LightBlue"
+               Margin="30,50"/>
+    </Grid>
+
+</ContentPage>
