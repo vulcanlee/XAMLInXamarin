@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PageClass"
+             x:Class="PageClass.MainPage"
+             Title="Page 類別共用屬性展示"
+             BackgroundColor="LightPink"
+             BackgroundImage="about.png"
+             Padding="50, 30"
+             x:Name="ThisPage"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="切換" Icon="ToolIcon.png" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="下頁" Icon="Next.png" Clicked="ToolbarItemNextPage_Clicked"/>
+        <ToolbarItem Text="無圖示" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout
+        x:Name="stacklayout"
+        BackgroundColor="#889db6e0"
+        >
+        <Button x:Name="btnChangeNavigation" 
+                HorizontalOptions="Center" VerticalOptions="Center"
+                Text="切換成導航頁面" Clicked="btnChangeNavigation_Clicked"/>
+        <Label Text="{Binding Width, Source={x:Reference ThisPage},StringFormat='頁面寬度 {0}'}"/>
+        <Label Text="{Binding Height, Source={x:Reference ThisPage},StringFormat='頁面高度 {0}'}"/>
+        <Label Text="{Binding Width, Source={x:Reference stacklayout},StringFormat='StackLayout 寬度 {0}'}"/>
+        <Label Text="{Binding Height, Source={x:Reference stacklayout},StringFormat='StackLayout 高度 {0}'}"/>
+        <Button x:Name="btnIsBusy" Text="忙碌 3 秒鐘" Clicked="btnIsBusy_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
