@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LayoutClass"
+             x:Class="LayoutClass.MainPage">
+
+    <StackLayout>
+        <StackLayout
+            x:Name="stacklayout"
+            HorizontalOptions="Fill" VerticalOptions="Start"
+            CascadeInputTransparent="True"
+            InputTransparent="True"
+           >
+            <Label Text="{Binding CascadeInputTransparent, Source={Reference stacklayout},StringFormat='CascadeInputTransparent={0}'}"/>
+            <Label Text="{Binding InputTransparent, Source={Reference stacklayout},StringFormat='InputTransparent={0}'}"/>
+            <Entry Placeholder="請輸入登入帳號"/>
+            <Entry Placeholder="請輸入登入密碼"/>            
+        </StackLayout>
+
+        <Grid
+            x:Name="grid"
+            Margin="100"
+            BackgroundColor="LightBlue"
+            IsClippedToBounds="True"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <BoxView
+                HorizontalOptions="Start" VerticalOptions="Start"
+                Color="Pink"
+                WidthRequest="100" HeightRequest="100"
+                TranslationX="150" TranslationY="-50"
+                />
+            <BoxView
+                HorizontalOptions="End" VerticalOptions="End"
+                Color="Green"
+                WidthRequest="100" HeightRequest="100"
+                Margin="-20"
+                />
+            <Label HorizontalOptions="Center" VerticalOptions="Center"
+                Text="{Binding IsClippedToBounds, Source={Reference grid},StringFormat='IsClippedToBounds={0}'}"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
