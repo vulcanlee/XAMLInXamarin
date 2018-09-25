@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PopupDialog"
+             x:Class="PopupDialog.MainPage"
+             Title="頁面之快顯示窗 使用範例">
+
+    <StackLayout
+        HorizontalOptions="Center" VerticalOptions="Center">
+        <Label x:Name="label"
+               FontSize="Large"
+               TextColor="SkyBlue"/>
+        <Button x:Name="btnDisplayAlert"
+                Text="顯示警示 對話窗" Clicked="btnDisplayAlert_Clicked"/>
+        <Button x:Name="btnDisplayActionSheet"
+                Text="顯示動作表 對話窗" Clicked="btnDisplayActionSheet_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
