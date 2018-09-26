@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PageAppear"
+             x:Class="PageAppear.NewPage"
+             Title="新頁面"
+             BackgroundColor="LightYellow">
+
+    <StackLayout
+        Padding="20">
+        <Label Text="{Binding MyProperty,Source={Static local:GlobalClass.Current}}"
+               HorizontalOptions="Fill" VerticalOptions="Start"
+               FontSize="16"
+               TextColor="Blue"
+               />
+    </StackLayout>
+
+</ContentPage>
