@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigateOP.Page1"
+             Title="第一頁面"
+             BackgroundColor="LightYellow"
+             NavigationPage.HasBackButton="{Binding BackButtonVisible}">
+
+    <StackLayout>
+        <Button x:Name="btnGoPage2"
+                Clicked="btnGoPage2_Clicked"
+                Text="切換到 Page 2"/>
+        <Button x:Name="btnGoback"
+                Clicked="btnGoback_Clicked"
+                Text="退回上一頁"/>
+        <Button x:Name="btnHiddenBack"
+                Clicked="btnHiddenBack_Clicked"
+                Text="隱藏回上頁軟體按鈕"/>
+        <Label Text="{Binding BackButtonVisible ,StringFormat='顯示回上頁軟體按鈕狀態 {0}'}"/>
+        <Button x:Name="btnHiddenPhysicalBack"
+                Clicked="btnHiddenPhysicalBack_Clicked"
+                Text="停用回上頁硬體按鈕"/>
+        <Label Text="{Binding PhysicalBackButtonEnable ,StringFormat='啟用回上頁硬體按鈕狀態 {0}'}"/>
+    </StackLayout>
+
+</ContentPage>

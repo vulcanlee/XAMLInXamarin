@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NavigateOP"
+             x:Class="NavigateOP.MainPage"
+             Title="頁面導航的相關操作"
+             BackgroundColor="LightBlue"
+             >
+
+    <StackLayout>
+        <Button x:Name="btnGoPage1"
+                Clicked="btnGoPage1_Clicked"
+                Text="切換到 Page 1"/>
+        <Button x:Name="btnNoneNavigationPageMode"
+                Clicked="btnNoneNavigationPageMode_Clicked"
+                Text="切換到非導航頁面模式"/>
+        <Button x:Name="btnNavigationPageMode"
+                Clicked="btnNavigationPageMode_Clicked"
+                Text="切換到導航頁面模式"/>
+    </StackLayout>
+
+</ContentPage>
