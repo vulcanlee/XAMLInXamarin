@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NavigateMore"
+             x:Class="NavigateMore.MainPage"
+             Title="更多導航工具列的應用"
+             BackgroundColor="LightBlue"
+             >
+
+    <StackLayout>
+        <Button x:Name="btnGoPage1"
+                Clicked="btnGoPage1_Clicked"
+                Text="切換到 Page 1"/>
+        <Button x:Name="btnCustomNavigationPage"
+                Clicked="btnNavigationPageMode_Clicked"
+                Text="切換客製化導航頁面工具列顏色"/>
+        <Button x:Name="btnDefaultNavigationPage"
+                Clicked="btnDefaultNavigationPage_Clicked"
+                Text="切換預設導航頁面工具列顏色"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigateMore.Page2"
+             Title="第二頁面"
+             BackgroundColor="LightGreen">
+
+    <StackLayout>
+        <Button x:Name="btnGoback"
+                Clicked="btnGoback_Clicked"
+                Text="退回上一頁"/>
+    </StackLayout>
+
+
+</ContentPage>

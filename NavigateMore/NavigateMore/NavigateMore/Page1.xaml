@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigateMore.Page1"
+             Title="第一頁面"
+             BackgroundColor="LightYellow"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Button x:Name="btnGoPage2"
+                Clicked="btnGoPage2_Clicked"
+                Text="切換到 Page 2"/>
+        <Button x:Name="btnGoback"
+                Clicked="btnGoback_Clicked"
+                Text="退回上一頁"/>
+    </StackLayout>
+
+
+</ContentPage>
