@@ -12,7 +12,18 @@ namespace PageAppear
     public class GlobalClass : INotifyPropertyChanged
     {
         // Singleton
-        public static GlobalClass Current = new GlobalClass();
+        private static GlobalClass _Current = new GlobalClass();
+        public static GlobalClass Current
+        {
+            get
+            {
+                if(_Current == null)
+                {
+                    _Current = new GlobalClass();
+                }
+                return _Current;
+            }
+        }
 
         private GlobalClass()
         {
