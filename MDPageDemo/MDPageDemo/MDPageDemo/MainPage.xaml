@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MDPageDemo"
+             x:Class="MDPageDemo.MainPage">
+
+    <Grid
+        x:Name="gd"
+        HorizontalOptions="Center" VerticalOptions="Center">
+        <BoxView
+            x:Name="boxview"
+            Color="LightBlue"
+            HorizontalOptions="Center" VerticalOptions="Center"
+            WidthRequest="100" HeightRequest="100"/>
+        <Label Text="XAML"
+               HorizontalOptions="Center" VerticalOptions="Center"
+               TextColor="Red"
+               FontSize="Large"/>
+    </Grid>
+
+</ContentPage>
