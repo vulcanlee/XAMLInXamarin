@@ -12,6 +12,12 @@
         <Button x:Name="btnGoHome"
                 Clicked="btnGoHome_Clicked"
                 Text="直接回首頁"/>
+        <Button x:Name="btnShowNavigationStack"
+                Clicked="btnShowNavigationStack_Clicked"
+                Text="顯示導航堆疊內容"/>
+        <Label x:Name="labelStack"
+               TextColor="Red" 
+               FontSize="Medium"/>
     </StackLayout>
 
 </ContentPage>

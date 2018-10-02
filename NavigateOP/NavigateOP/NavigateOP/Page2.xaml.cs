@@ -14,7 +14,7 @@ namespace NavigateOP
 	{
 		public Page2 ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 
         private void btnGoback_Clicked(object sender, EventArgs e)
@@ -25,6 +25,15 @@ namespace NavigateOP
         private void btnGoHome_Clicked(object sender, EventArgs e)
         {
             Navigation.PopToRootAsync();
+        }
+
+        private void btnShowNavigationStack_Clicked(object sender, EventArgs e)
+        {
+            labelStack.Text = "";
+            foreach (var item in Navigation.NavigationStack)
+            {
+                labelStack.Text += item.GetType().Name+Environment.NewLine;
+            }
         }
     }
 }
