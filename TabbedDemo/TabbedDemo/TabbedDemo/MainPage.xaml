@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom" 
+            xmlns:local="clr-namespace:TabbedDemo"
+            x:Class="TabbedDemo.MainPage">
+
+    <ContentPage Title="Microsoft" Icon="Microsoft.png">
+        <WebView
+            HorizontalOptions="Fill" VerticalOptions="Fill"
+            Source="Http://www.Microsoft.com"/>
+    </ContentPage>
+    <ContentPage Title="Google" Icon="Google.png">
+        <WebView
+            HorizontalOptions="Fill" VerticalOptions="Fill"
+            Source="Http://www.Google.com"/>
+    </ContentPage>
+
+    <NavigationPage Title="導航頁面" Icon="Navigation.png">
+        <x:Arguments>
+            <ContentPage x:Name="NaviPage" Title="內嵌ContentPage">
+                <Button x:Name="btnGoPage1"
+                        Text="導航到 Page1"
+                        HorizontalOptions="Center" VerticalOptions="Center"
+                        Clicked="btnGoPage1_Clicked"
+                        />
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+    <local:Page1/>
+
+    <local:Page2/>
+
+</TabbedPage>
