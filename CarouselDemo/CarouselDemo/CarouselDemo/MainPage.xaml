@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CarouselDemo"
+             x:Class="CarouselDemo.MainPage"
+             Title="旋轉木馬頁面的使用">
+
+    <StackLayout
+        HorizontalOptions="Center" VerticalOptions="Center">
+        <Button x:Name="btnSubset" Clicked="btnSubset_Clicked"
+                Text="使用 CarouselPage的子集合 ContentPage 執行個體"/>
+        <Button x:Name="btnItemsSource" Clicked="btnItemsSource_Clicked"
+                Text="指派集合 ItemsSource 屬性"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarouselDemo.Page2"
+              Title="指派集合 ItemsSource 屬性">
+
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage>
+                <StackLayout>
+                    <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
+                    <BoxView Color="{Binding Color}" 
+                             WidthRequest="200" HeightRequest="200" 
+                             HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                    <Image
+                            HorizontalOptions="Center" VerticalOptions="Center"
+                            WidthRequest="200" HeightRequest="300"
+                            Aspect="AspectFit"
+                            Source="{Binding ImageUrl}"/>
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>

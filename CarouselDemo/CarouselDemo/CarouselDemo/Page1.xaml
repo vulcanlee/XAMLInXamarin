@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarouselDemo.Page1"
+              Title="ContentPage 執行個體子集合">
+    <CarouselPage.Children>
+        <ContentPage>
+            <StackLayout>
+                <BoxView Color="Red" 
+                         WidthRequest="200" HeightRequest="200" 
+                         HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ContentPage>
+        <ContentPage>
+            <StackLayout>
+                <Label Text="這是文字標籤" FontSize="Large"
+                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ContentPage>
+        <ContentPage>
+            <StackLayout>
+                <Entry Text="這是文字輸入盒" FontSize="Large"
+                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ContentPage>
+    </CarouselPage.Children>
+
+</CarouselPage>
