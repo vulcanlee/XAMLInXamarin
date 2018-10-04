@@ -18,5 +18,10 @@ namespace TabbedDemo
         {
             NaviPage.Navigation.PushAsync(new Page1());
         }
+
+        private void btnTabPage2_Clicked(object sender, EventArgs e)
+        {
+            this.SelectedItem = TabPage2;
+        }
     }
 }
