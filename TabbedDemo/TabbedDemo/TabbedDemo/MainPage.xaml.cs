@@ -16,7 +16,7 @@ namespace TabbedDemo
 
         private void btnGoPage1_Clicked(object sender, EventArgs e)
         {
-            NaviPage.Navigation.PushAsync(new Page1());
+            Navigation.PushAsync(new Page1());
         }
 
         private void btnTabPage2_Clicked(object sender, EventArgs e)
