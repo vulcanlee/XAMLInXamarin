@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MDPageCust"
+             x:Class="MDPageCust.MainPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="功能表">
+            <StackLayout
+                Margin="20,100,20,0"
+                >
+                <Button x:Name="btnGotoPage1"
+                        Text="功能1"
+                        Clicked="btnGotoPage1_Clicked"
+                        />
+                <Button x:Name="btnGotoPage2"
+                        Text="功能2"
+                        Clicked="btnGotoPage2_Clicked"
+                        />
+                <Button x:Name="btnGotoPage3"
+                        Text="功能3"
+                        Clicked="btnGotoPage3_Clicked"
+                        />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:Page1 />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

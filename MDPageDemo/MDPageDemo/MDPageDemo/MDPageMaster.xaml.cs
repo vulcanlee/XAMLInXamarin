@@ -27,11 +27,11 @@ namespace MDPageDemo
 
         class MDPageMasterViewModel : INotifyPropertyChanged
         {
-            public List<MDPageMenuItem> MenuItems { get; set; }
+            public ObservableCollection<MDPageMenuItem> MenuItems { get; set; }
             
             public MDPageMasterViewModel()
             {
-                MenuItems = new List<MDPageMenuItem>(new[]
+                MenuItems = new ObservableCollection<MDPageMenuItem>(new[]
                 {
                     new MDPageMenuItem { Id = 0, Title = "Page 1" },
                     new MDPageMenuItem { Id = 1, Title = "Page 2" },
