@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ContentViewDemo"
+             x:Class="ContentViewDemo.MainPage">
+
+    <StackLayout>
+        <ContentView
+            >
+            <StackLayout
+                >
+                <Label Text="主題"/>
+                <Entry Placeholder="請輸入主題內容"/>
+            </StackLayout>
+        </ContentView>
+
+        <local:MyEntry
+            BindingContext="{Binding Account}"
+            />
+
+        <local:MyEntry
+            BindingContext="{Binding Password}"
+            />
+
+        <Button Text="登入"
+                Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContentViewDemo.MyEntry"
+             Padding="20,5">
+    <StackLayout
+        BackgroundColor="LightGray"
+                >
+        <Label Text="{Binding Title}"
+               IsVisible="{Binding ShowTitle}"/>
+        <Entry x:Name="entry" Text="{Binding Input}" 
+               Placeholder="{Binding EntryHint}"
+               TextChanged="Entry_TextChanged"/>
+    </StackLayout>
+</ContentView>
