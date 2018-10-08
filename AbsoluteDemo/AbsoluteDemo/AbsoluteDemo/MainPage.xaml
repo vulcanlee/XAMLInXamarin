@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AbsoluteDemo"
+             x:Class="AbsoluteDemo.MainPage">
+
+    <AbsoluteLayout>
+        <Label 
+            BackgroundColor="LightGreen"
+            Text="使用 絕對值 來標示文字要顯示的位置與大小"
+            AbsoluteLayout.LayoutBounds="50,50,100,100" LineBreakMode="WordWrap"  />
+
+        <Label 
+            BackgroundColor="LightYellow"
+            Text="使用 比例值 來標示文字要顯示的位置與大小"
+            AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All"
+            LineBreakMode="WordWrap"  />
+
+        <Label 
+            BackgroundColor="LightPink"
+            Text="使用 Width/Height 比例值 來標示文字要顯示的位置與大小"
+            AbsoluteLayout.LayoutBounds="150,200,.5,0.2" 
+            AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional"
+            LineBreakMode="WordWrap"  />
+
+        <!--位置為比例值，尺寸為絕對值-->
+        <BoxView Color="Green"  
+                 AbsoluteLayout.LayoutBounds="1,.5, 25, 100"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <BoxView Color="Red" 
+                 AbsoluteLayout.LayoutBounds="0,.5,25,100"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <BoxView Color="Blue" 
+                 AbsoluteLayout.LayoutBounds=".5,0,100,25"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+    </AbsoluteLayout>
+
+</ContentPage>
