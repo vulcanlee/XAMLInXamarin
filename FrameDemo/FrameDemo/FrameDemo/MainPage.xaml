@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FrameDemo"
+             x:Class="FrameDemo.MainPage"
+             BackgroundColor="LightYellow">
+
+    <StackLayout
+        HorizontalOptions="Center" VerticalOptions="Center">
+        <Frame
+            BorderColor="Blue"
+            HasShadow="True"
+            CornerRadius="10"
+            BackgroundColor="LightGreen"
+            >
+            <StackLayout
+                >
+                <Label Text="主題"/>
+                <Entry Placeholder="請輸入主題內容"/>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
