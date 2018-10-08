@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GridDemo"
+             x:Class="GridDemo.MainPage">
+
+    <Grid
+        Margin="20"
+        BackgroundColor="LightBlue"
+        IsClippedToBounds="True"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="最佳推薦"
+               FontSize="30"
+               TextColor="Red"
+               VerticalOptions="Center" Margin="8,0,0,0"
+               />
+
+        <Grid
+            Grid.Row="0" Grid.Column="1"
+            >
+            <Image Source="https://developer.xamarin.com/demo/IMG_1302.JPG"                   
+                   Aspect="AspectFill"
+                   />
+
+            <BoxView Color="#99000000"
+                     VerticalOptions="End"
+                     HeightRequest="70"/>
+
+            <Label Text="VIP 會員限定"
+                   TextColor="White"
+                   FontSize="24"
+                   VerticalOptions="End"
+                   Margin="10,0,0,20"
+                   />
+
+            <Label Text="2018.10.10"
+                   TextColor="White"
+                   FontSize="14"
+                   VerticalOptions="End" HorizontalOptions="End"
+                   Margin="5"
+                   />
+
+            <BoxView Color="Blue"
+                     WidthRequest="150" HeightRequest="150"
+                     HorizontalOptions="End" VerticalOptions="Start"
+                     Rotation="45"
+                     Margin="-75"
+                     />
+
+            <Label Text="70% Off"
+                   HorizontalOptions="End" VerticalOptions="Start"
+                   FontSize="20" TextColor="Pink"
+                   Rotation="45"
+                   Margin="10,20,0,0"
+                   />
+        </Grid>
+
+        <StackLayout
+            Grid.Row="1" Grid.Column="0"
+            Grid.ColumnSpan="2"
+            VerticalOptions="Center"
+            >
+            <Button Text="訂購"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
