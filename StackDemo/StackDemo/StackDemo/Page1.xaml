@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackDemo.Page1">
+
+    <StackLayout
+            Orientation="Vertical"
+            BackgroundColor="Purple"
+            Spacing="0"
+            >
+        <BoxView Color="LightBlue" VerticalOptions="Center"/>
+        <BoxView Color="LightGoldenrodYellow" VerticalOptions="End"/>
+        <BoxView Color="LightPink" VerticalOptions="StartAndExpand"/>
+        <BoxView Color="LightGreen" VerticalOptions="CenterAndExpand" />
+        <BoxView Color="LightSalmon" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StackDemo"
+             x:Class="StackDemo.MainPage"
+             Title="堆疊排列版面配置 使用範例">
+
+    <StackLayout
+        BackgroundColor="Black">
+        <StackLayout
+            Orientation="Horizontal"
+            BackgroundColor="Green"
+            >
+            <BoxView Color="LightBlue"/>
+            <BoxView Color="LightGoldenrodYellow"/>
+            <BoxView Color="LightPink"/>
+            <BoxView Color="LightGreen" HorizontalOptions="Center"/>
+            <BoxView Color="LightSalmon" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout
+            Orientation="Vertical"
+            BackgroundColor="Purple"
+            >
+            <!--使用不同 水平與垂直 LayoutOptions-->
+            <BoxView Color="LightBlue" HorizontalOptions="Start"/>
+            <BoxView Color="LightGoldenrodYellow" HorizontalOptions="Center"/>
+            <BoxView Color="LightPink" HorizontalOptions="End"/>
+            <BoxView Color="LightGreen" VerticalOptions="Center"/>
+            <BoxView Color="LightSalmon" VerticalOptions="End"/>
+        </StackLayout>
+
+        <!--加入 HorizontalOptions="End" 有何效果-->
+        <Button x:Name="btnStartNavi" 
+                Text="啟用導航模式"
+                Clicked="btnStartNavi_Clicked"/>
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="End"
+            BackgroundColor="Blue"
+            >
+            <Label Text="Expand效果測試" VerticalOptions="Center"
+                   TextColor="White"/>
+            <Button x:Name="btnStart" 
+                    Text="開始" HorizontalOptions="End"
+                    Clicked="btnStart_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
