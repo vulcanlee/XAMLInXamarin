@@ -20,6 +20,20 @@
             </StackLayout>
         </Frame>
 
+        <Frame
+            BorderColor="Blue"
+            HasShadow="True"
+            CornerRadius="10"
+            BackgroundColor="LightPink"
+            Padding="0"
+            >
+            <StackLayout
+                >
+                <Label Text="主題"/>
+                <Entry Placeholder="請輸入主題內容"/>
+            </StackLayout>
+        </Frame>
+
     </StackLayout>
 
 </ContentPage>
