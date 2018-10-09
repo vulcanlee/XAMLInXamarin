@@ -6,7 +6,7 @@
 
     <Grid
         Margin="20"
-        BackgroundColor="LightBlue"
+        BackgroundColor="Green"
         IsClippedToBounds="True"
         >
         <Grid.RowDefinitions>
@@ -24,6 +24,9 @@
                VerticalOptions="Center" Margin="8,0,0,0"
                />
 
+        <BoxView Color="#33FFFFFF"
+                 Grid.Row="0" Grid.Column="0"
+                 Grid.ColumnSpan="2"/>
         <Grid
             Grid.Row="0" Grid.Column="1"
             >
