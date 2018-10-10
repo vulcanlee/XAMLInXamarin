@@ -8,10 +8,12 @@
         Margin="20"
         BackgroundColor="Green"
         IsClippedToBounds="True"
+        RowSpacing="0" ColumnSpacing="0"
         >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40"/>
@@ -29,6 +31,7 @@
                  Grid.ColumnSpan="2"/>
         <Grid
             Grid.Row="0" Grid.Column="1"
+            RowSpacing="0" ColumnSpacing="0"
             >
             <Image Source="https://developer.xamarin.com/demo/IMG_1302.JPG"                   
                    Aspect="AspectFill"
@@ -67,12 +70,21 @@
                    />
         </Grid>
 
-        <StackLayout
-            Grid.Row="1" Grid.Column="0"
-            Grid.ColumnSpan="2"
-            VerticalOptions="Center"
-            >
-            <Button Text="訂購"/>
-        </StackLayout>
+        <Button Text="訂購"
+                Grid.Row="1" Grid.Column="0"
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center"
+                BackgroundColor="Red"
+                TextColor="LightYellow"/>
+
+        <BoxView Color="Gray"
+                 Grid.Row="2" Grid.ColumnSpan="2"
+                 />
+        <Label Text="覺醒小舖推薦"
+               Grid.Row="2" Grid.ColumnSpan="2"
+               HorizontalOptions="Start" VerticalOptions="Center"
+               Margin="15,0"
+               FontSize="Large"
+               TextColor="White"/>
     </Grid>
 </ContentPage>
