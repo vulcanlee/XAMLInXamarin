@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ScrollViewLab"
+             x:Class="ScrollViewLab.MainPage">
+
+    <StackLayout>
+        <ScrollView x:Name="scrollview"
+            Orientation="Horizontal"
+            >
+            <StackLayout
+                Orientation="Horizontal"
+                >
+                <BoxView Color="Blue" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Red" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Green" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Yellow" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Pink" WidthRequest="80" HeightRequest="80"/>
+                <Label x:Name="lblHor" Text="我要覺醒"
+                       FontSize="Large"
+                       TextColor="White"
+                       BackgroundColor="Gray"
+                       VerticalOptions="Center"/>
+                <BoxView Color="Orange" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="SkyBlue" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Black" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Brown" WidthRequest="80" HeightRequest="80"/>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout
+            Orientation="Horizontal"
+            >
+            <Button x:Name="btnGoLeft"
+                    Text="往左捲動" Clicked="btnGoLeft_Clicked"/>
+            <Button x:Name="btnGoRight"
+                    Text="往右捲動" Clicked="btnGoRight_Clicked"/>
+            <Button x:Name="btnGoLabel"
+                    Text="跳到 文字標籤" Clicked="btnGoLabel_Clicked"/>
+        </StackLayout>
+        <ScrollView
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            >
+            <StackLayout
+                Orientation="Vertical"
+                >
+                <BoxView Color="Blue" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Red" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Green" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Yellow" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Pink" WidthRequest="80" HeightRequest="80"/>
+                <Label Text="我要覺醒"
+                       FontSize="Large"
+                       TextColor="White"
+                       BackgroundColor="Gray"
+                       VerticalOptions="Center"/>
+                <BoxView Color="Orange" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="SkyBlue" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Black" WidthRequest="80" HeightRequest="80"/>
+                <BoxView Color="Brown" WidthRequest="80" HeightRequest="80"/>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
