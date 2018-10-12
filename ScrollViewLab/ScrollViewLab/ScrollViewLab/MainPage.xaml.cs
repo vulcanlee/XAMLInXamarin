@@ -16,12 +16,12 @@ namespace ScrollViewLab
 
         private void btnGoLeft_Clicked(object sender, EventArgs e)
         {
-            scrollview.ScrollToAsync(-150, 0, true);
+            scrollview.ScrollToAsync(250, 0, true);
         }
 
         private void btnGoRight_Clicked(object sender, EventArgs e)
         {
-            scrollview.ScrollToAsync(150, 0, true);
+            scrollview.ScrollToAsync(350, 0, true);
         }
 
         private void btnGoLabel_Clicked(object sender, EventArgs e)
