@@ -41,7 +41,7 @@ namespace BindingDemo
                 {
                     {"A_item1", 9100 },
                     {"A_item2", 9120 },
-                    {"A_item3", 9140 },
+                    {"item3", 9140 },
                     {"A_item4", 9160 },
                 },
         };
