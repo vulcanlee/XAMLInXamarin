@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BindingDemo"
+             x:Class="BindingDemo.MainPage"
+             Title="各種資料綁定語法 使用範例">
+
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    <!--在這個練習專案中，將會學習各種資料綁定 Data Binding 的方法與技巧-->
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+        <!--深層資料繫節-->
+        <Label Text="{Binding Path=MyItemObject.FirstName}" BackgroundColor="LightYellow"/>
+        <Label Text="{Binding Path=MyItemObject.MySubItemData.FirstName}" BackgroundColor="LightYellow"/>
+        <Label Text="{Binding MyItemObject.MySubItemData.FirstName}" BackgroundColor="LightYellow"/>
+
+        <!--另外指定新的 BindingContext-->
+        <StackLayout>
+            <StackLayout.BindingContext>
+                <local:MainPageViewModel>
+                    <x:Arguments>
+                        <x:String>Argument1</x:String>
+                    </x:Arguments>
+                </local:MainPageViewModel>
+            </StackLayout.BindingContext>
+            <!--深層資料繫節-->
+            <Label Text="{Binding Path=MyItemObject.FirstName}" BackgroundColor="LightPink"/>
+            <Label Text="{Binding Path=MyItemObject.MySubItemData.FirstName}" BackgroundColor="LightPink"/>
+            <Label Text="{Binding MyItemObject.MySubItemData.FirstName}" BackgroundColor="LightPink"/>
+        </StackLayout>
+
+        <!--將 Text 屬性(Attribute)，綁定到 ViewModel 中的 Title 屬性(Property)-->
+        <Label x:Name="label" Text="{Binding Title}" BackgroundColor="LightGreen"/>
+        <!--使用 Path 指定綁定的路徑，Binding後沒有指定，表示從 BindingContext開始-->
+        <Label Text="{Binding Path=Title}" BackgroundColor="LightGreen"/>
+        <!--使用 Property 與 Binding 標籤來表示-->
+        <Label BackgroundColor="LightYellow">
+            <Label.Text>
+                <Binding Path="Title" />
+            </Label.Text>
+        </Label>
+        <!--使用另外一個控制項作為綁定資料來源，要使用Source來標示，不使用 BindingContext-->
+        <Label Text="{Binding Source={x:Reference label}, Path=Text}" BackgroundColor="LightGreen"/>
+        <!--Binding Source 可以使用 Name來標示要參考哪個控制項-->
+        <Label Text="{Binding Source={x:Reference Name=label}, Path=Text}" BackgroundColor="LightGreen"/>
+        <!--直接設定該控制項的BindingContext來源為某個控制項，裡面的屬性，就可以直接進行綁定-->
+        <Label BindingContext="{Binding Source={x:Reference label}}" Text="{Binding Text}" BackgroundColor="LightGreen"/>
+
+        <!--資料集合的資料綁定-->
+        <!--綁資料集合內的某筆資料-->
+        <Label Text="{Binding MyItemList[1].FirstName}" BackgroundColor="LightSkyBlue"/>
+        <Label Text="{Binding Path=MyItemList[1].FirstName}" BackgroundColor="LightSkyBlue"/>
+        <!--綁資料字典內的某筆資料-->
+        <Label Text="{Binding Dict[item3]}" BackgroundColor="LightSkyBlue"/>
+
+        <Button x:Name="btnChangeBindingContext"
+                Text="變更 BindingContext"
+                Clicked="btnChangeBindingContext_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
