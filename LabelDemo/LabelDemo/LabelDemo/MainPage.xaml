@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LabelDemo"
+             x:Class="LabelDemo.MainPage"
+             Title="文字標籤 使用範例1">
+
+    <StackLayout>
+        <Label Text="預設文字標籤的顯示結果" />
+        <Label Text="文字標籤的背景與文字顏色設定"
+               BackgroundColor="Brown" TextColor="LightYellow"/>
+        <Label Text="使用 LayoutOptions 來定位"
+               BackgroundColor="Brown" TextColor="LightYellow"
+               HeightRequest="35"
+               HorizontalOptions="End" VerticalOptions="Center"
+               />
+        <Label Text="使用 TextAlignment 來定位"
+               BackgroundColor="Brown" TextColor="LightYellow"
+               HeightRequest="35"
+               HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+               />
+        <Label Text="字型的大小使用範例 FontSize 24"
+               FontSize="24"/>
+        <Label Text="字型的大小使用範例 FontSize = Medium"
+               FontSize="Medium"/>
+        <Label Text="(N/A) Object > BindableObject > Element > VisualElement > View > Label"
+               BackgroundColor="LightGreen" 
+               FontSize="24" />
+        <Label Text="(NoWrap) Object > BindableObject > Element > VisualElement > View > Label"
+               BackgroundColor="LightGreen" 
+               FontSize="24" LineBreakMode="NoWrap"/>
+        <Label Text="Object > BindableObject > Element > VisualElement > View > Label (HeadTruncation)"
+               BackgroundColor="LightGreen" 
+               FontSize="24" LineBreakMode="HeadTruncation"/>
+        <Label Text="Object (MiddleTruncation) > BindableObject  > Element > VisualElement > View > Label"
+               BackgroundColor="LightGreen" 
+               FontSize="24" LineBreakMode="MiddleTruncation"/>
+        <Label Text="(TailTruncation) Object > BindableObject > Element > VisualElement > View > Label"
+               BackgroundColor="LightGreen" 
+               FontSize="24" LineBreakMode="TailTruncation"/>
+        <Label Text="(WordWrap) Object > BindableObject > Element > VisualElement > View > Label"
+               BackgroundColor="LightGreen" 
+               HorizontalOptions="Start" VerticalOptions="Start"
+               HeightRequest="60" WidthRequest="320"
+               FontSize="24" LineBreakMode="WordWrap"/>
+
+        <Button x:Name="btnMore"
+                Text="更多使用說明"
+                Clicked="btnMore_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

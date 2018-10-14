@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LabelDemo.Page1"
+             Title="文字標籤 使用範例2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bold 粗體字"
+                   FontAttributes="Bold"/>
+            <Label Text="Italic 斜體字"
+                   FontAttributes="Italic"/>
+            <Label Text="None 沒有設定"
+                   FontAttributes="None"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Red Bold, 紅色 粗體 " 
+                              TextColor="Red" FontAttributes="Bold" />
+                        <Span Text="italic small 斜體 小字" 
+                              FontAttributes="Italic" FontSize="Small" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button x:Name="btnMainPage"
+                Text="回首頁"
+                Clicked="btnMainPage_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
