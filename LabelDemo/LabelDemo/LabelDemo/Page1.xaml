@@ -11,6 +11,8 @@
                    FontAttributes="Italic"/>
             <Label Text="None 沒有設定"
                    FontAttributes="None"/>
+            <Label Text="Bold,Italic 粗體字+斜體字"
+                   FontAttributes="Bold,Italic"/>
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
@@ -21,6 +23,19 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Red Bold, 紅色 粗體 大字" 
+                              TextColor="Red" FontAttributes="Bold" FontSize="Large" />
+                        <Span Text="italic small 斜體 20字體" 
+                              FontAttributes="Italic" FontSize="20" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label
+                TextColor="Blue" FontSize="30"
+                Text="(換行展示)第一行文字&#x0a;第一行文字"/>
             <Button x:Name="btnMainPage"
                 Text="回首頁"
                 Clicked="btnMainPage_Clicked"/>
