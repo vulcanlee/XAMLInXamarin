@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BoxViewDemo"
+             x:Class="BoxViewDemo.MainPage">
+
+    <Grid
+        Padding="20"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <BoxView
+            Grid.Row="0" Grid.Column="0"
+            Color="Blue"
+            WidthRequest="2"
+            HorizontalOptions="Start" VerticalOptions="Fill"/>
+        <BoxView
+            Grid.Row="0" Grid.Column="0"
+            Color="Red"
+            WidthRequest="2"
+            HorizontalOptions="End" VerticalOptions="Fill"/>
+
+        <BoxView
+            Grid.Row="0" Grid.Column="1"
+            Color="Blue"
+            HeightRequest="2"
+            HorizontalOptions="Fill" VerticalOptions="Start"/>
+        <BoxView
+            Grid.Row="0" Grid.Column="1"
+            Color="Red"
+            HeightRequest="2"
+            HorizontalOptions="Fill" VerticalOptions="End"/>
+
+        <BoxView
+            Grid.Row="1" Grid.Column="0"
+            Color="Black" Opacity="0.1"
+            HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        <StackLayout
+            Grid.Row="1" Grid.Column="0"
+            Margin="5,20"
+            >
+            <Label Text="帳號"/>
+            <Entry />
+            <Label Text="密碼"/>
+            <Entry />
+            <Button x:Name="btnLogin"
+                Text="登入" Clicked="btnLogin_Clicked"/>
+        </StackLayout>
+
+        <BoxView
+            x:Name="boxViewMask"
+            Grid.Row="1" Grid.Column="0"
+            Color="Orange" Opacity="0.3"/>
+
+        <BoxView
+            Grid.Row="1" Grid.Column="1"
+            Color="Green"
+            HorizontalOptions="Center" VerticalOptions="End"
+            WidthRequest="80" HeightRequest="200"/>
+        <BoxView x:Name="boxviewCurrent"
+            Grid.Row="1" Grid.Column="1"
+            Color="LightGreen" 
+            HorizontalOptions="Center" VerticalOptions="End"
+            WidthRequest="50" HeightRequest="50"/>
+
+    </Grid>
+
+</ContentPage>
