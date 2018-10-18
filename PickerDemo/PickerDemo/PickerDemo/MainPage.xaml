@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PickerDemo"
+             x:Class="PickerDemo.MainPage">
+
+    <StackLayout>
+        <Picker x:Name="picker1"
+                Title="請選擇分類"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedIndexChanged="picker1_SelectedIndexChanged" 
+                />
+        <Picker x:Name="picker2"
+                Title="請選擇次分類"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedIndexChanged="picker2_SelectedIndexChanged"
+                />
+        <Label x:Name="labelMainCat"/>
+        <Label x:Name="labelSubCat"/>
+
+        <SearchBar x:Name="searchbar"
+                   Placeholder="請輸入要選擇的項目"
+                   SearchButtonPressed="searchbar_SearchButtonPressed"/>
+    </StackLayout>
+
+</ContentPage>
