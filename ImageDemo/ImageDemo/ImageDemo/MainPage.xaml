@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ImageDemo"
+             x:Class="ImageDemo.MainPage">
+
+    <StackLayout>
+        <Image
+            Source="https://developer.xamarin.com/demo/IMG_4023.JPG?height=640"
+            BackgroundColor="Red" HorizontalOptions="Center"
+            WidthRequest="100" HeightRequest="100"/>
+        <Image Source="Xamarin.png"
+               WidthRequest="100" HeightRequest="100"
+               />
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="Center"
+            >
+            <Image Source="sample.jpg"   
+                   Aspect="Fill"
+                   BackgroundColor="Red"
+                   WidthRequest="120" HeightRequest="120"/>
+            <Image Source="sample.jpg"      
+                   Aspect="AspectFill"
+                   BackgroundColor="Red"
+                   WidthRequest="120" HeightRequest="120"/>
+            <Image Source="sample.jpg" 
+                   Aspect="AspectFit"
+                   BackgroundColor="Red"
+                   WidthRequest="120" HeightRequest="120"/>
+        </StackLayout>
+
+        <Image x:Name="image"
+               HorizontalOptions="Center"
+               BackgroundColor="Red"
+               WidthRequest="200" HeightRequest="200"/>
+        <Button x:Name="btnLoadShareImage"
+                Text="讀取共用專案內的圖片"
+                Clicked="btnLoadShareImage_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
