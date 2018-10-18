@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EntryDemo.Page1"
+             Title="文字編輯器">
+
+    <StackLayout>
+        <Editor Text="綠色文字與粉紅色背景"
+                TextColor="Green" BackgroundColor="LightPink"
+                HeightRequest="100"/>
+        <Editor x:Name="editor"
+                Text="自動調整大小的文字編輯器"
+                AutoSize="TextChanges"/>
+        <Button x:Name="btnMoreText"
+                Text="加入更多文字"
+                Clicked="btnMoreText_Clicked"/>
+        <Button x:Name="btnLessText"
+                Text="較少的文字"
+                Clicked="btnLessText_Clicked"/>
+        <Button x:Name="btnGoMain"
+                Text="文字輸入盒"
+                Clicked="btnGoMain_Clicked"/>
+    </StackLayout>
+</ContentPage>

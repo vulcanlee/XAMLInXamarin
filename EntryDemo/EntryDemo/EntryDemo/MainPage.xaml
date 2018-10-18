@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EntryDemo"
+             x:Class="EntryDemo.MainPage"
+             Title="文字輸入盒">
+
+    <StackLayout>
+        <Entry Placeholder="淡紅色提示浮水印"
+               PlaceholderColor="#33FF0000"/>
+        <Entry Text="藍色輸入文字"
+               TextColor="Blue"/>
+        <Entry Text="這裡最多僅能夠輸入長度為五"
+               MaxLength="5"/>
+        <Entry Text="使用數字軟體鍵盤" 
+               Keyboard="Numeric"/>
+        <Entry Text="自訂鍵盤的工廠方法" >
+            <Entry.Keyboard>
+                <Keyboard x:FactoryMethod="Create">
+                    <x:Arguments>
+                        <KeyboardFlags>Suggestions,Spellcheck,CapitalizeWord</KeyboardFlags>
+                    </x:Arguments>
+                </Keyboard>
+            </Entry.Keyboard>
+        </Entry>
+        <Entry Text="自訂 Return 鍵" 
+               ReturnType="Send"/>
+        <Entry x:Name="entryEvent" Text="觸發事件" 
+               TextChanged="entryEvent_TextChanged"
+               Completed="entryEvent_Completed"
+               Unfocused="entryEvent_Unfocused"/>
+        <Label x:Name="labelNotify" TextColor="Red"/>
+        <Button x:Name="btnEditor" Text="文字編輯器"
+                Clicked="btnEditor_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
