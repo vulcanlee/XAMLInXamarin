@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TableViewDemo"
+             x:Class="TableViewDemo.MainPage">
+
+    <StackLayout>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="執行選項">
+                    <SwitchCell Text="啟用推播通知" />
+                    <SwitchCell Text="自動更新檢查" On="true" />
+                    <SwitchCell Text="自動登入" On="true"/>
+                    <SwitchCell Text="自動加好友" On="true" />
+                </TableSection>
+                <TableSection Title="個人資訊設定">
+                    <EntryCell Label="姓名" Placeholder="請輸入您的姓名" />
+                    <EntryCell Label="電話" Text="0912345678" />
+                    <EntryCell Label="帳號" Text="vulcan lee" />
+                </TableSection>
+                <TableSection Title="QR Code 邀請">
+                    <ViewCell>
+                            <Button Text="重新產生" 
+                                HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </ViewCell>
+                    <ViewCell>
+                            <BoxView Color="Gray"
+                                     HorizontalOptions="Center" VerticalOptions="Center"
+                                     WidthRequest="50" HeightRequest="50"/>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+
+</ContentPage>
