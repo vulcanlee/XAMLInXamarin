@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="ListViewDemo.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ListViewDemo.UWP"
+    RequestedTheme="Light">
+
+</Application>

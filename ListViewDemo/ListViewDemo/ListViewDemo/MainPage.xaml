@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewDemo"
+             x:Class="ListViewDemo.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="listview1"
+                  VerticalOptions="FillAndExpand"
+                  ItemTapped="listview1_ItemTapped"
+                  
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"
+                              Detail="{Binding Description}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <ListView x:Name="listview2"
+                  HasUnevenRows="True"
+                  VerticalOptions="FillAndExpand"
+                  ItemTapped="listview2_ItemTapped"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="listview2_Refreshing"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="22"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <BoxView Color="{Binding Color}"
+                                     Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                            <Label Text="{Binding Title}"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="{Binding Description}"
+                                   Grid.Row="1" Grid.Column="0"
+                                   HorizontalOptions="Start" VerticalOptions="Start"/>
+                            <Label Text="{Binding Price}"
+                                   Grid.Row="0" Grid.Column="1"
+                                   Grid.RowSpan="2"
+                                   FontSize="24"
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                   FontAttributes="Bold"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
