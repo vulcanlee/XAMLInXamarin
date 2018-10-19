@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProgressDemo"
+             x:Class="ProgressDemo.MainPage">
+
+
+    <StackLayout>
+        <Label Text="請點選要下載的項目"
+           HorizontalOptions="Center"/>
+        <Grid
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <BoxView Color="LightBlue"
+                 WidthRequest="150" HeightRequest="150"/>
+                <Button x:Name="btn00" Text="下載"
+                HorizontalOptions="End" VerticalOptions="End"
+                Clicked="btn00_Clicked"/>
+                <Grid x:Name="gdMask00">
+                    <BoxView Color="Black" Opacity="0.3"/>
+                    <ProgressBar x:Name="progbar00" Progress="0.3"
+                       Margin="15,0"
+                       HorizontalOptions="Fill" VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <BoxView Color="LightBlue"
+             WidthRequest="150" HeightRequest="150"/>
+                <Button x:Name="btn10" Text="下載"
+            HorizontalOptions="End" VerticalOptions="End"
+            Clicked="btn10_Clicked"/>
+                <Grid x:Name="gdMask10">
+                    <BoxView Color="Black" Opacity="0.3"/>
+                    <ProgressBar x:Name="progbar10" Progress="0.3"
+                   Margin="15,0"
+                   HorizontalOptions="Fill" VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <BoxView Color="LightBlue"
+             WidthRequest="150" HeightRequest="150"/>
+                <Button x:Name="btn01" Text="下載"
+            HorizontalOptions="End" VerticalOptions="End"
+            Clicked="btn01_Clicked"/>
+                <Grid x:Name="gdMask01">
+                    <BoxView Color="Black" Opacity="0.3"/>
+                    <ProgressBar x:Name="progbar01" Progress="0.3"
+                   Margin="15,0"
+                   HorizontalOptions="Fill" VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <BoxView Color="LightBlue"
+             WidthRequest="150" HeightRequest="150"/>
+                <Button x:Name="btn11" Text="下載"
+            HorizontalOptions="End" VerticalOptions="End"
+            Clicked="btn11_Clicked"/>
+                <Grid x:Name="gdMask11">
+                    <BoxView Color="Black" Opacity="0.3"/>
+                    <ProgressBar x:Name="progbar11" Progress="0.3"
+                   Margin="15,0"
+                   HorizontalOptions="Fill" VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+        <ActivityIndicator x:Name="activityIndicator"
+                           Color="Red" WidthRequest="100" HeightRequest="100"
+                         />
+    </StackLayout>
+
+</ContentPage>
