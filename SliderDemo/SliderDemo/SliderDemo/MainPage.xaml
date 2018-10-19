@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SliderDemo"
+             x:Class="SliderDemo.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <BoxView x:Name="boxview"
+                 Color="Red" Grid.ColumnSpan="3"
+                 HorizontalOptions="Center"
+                 WidthRequest="200" HeightRequest="200"/>
+        <Label Text="Alpha A" Grid.Row="1"/>
+        <Label Text="{Binding Source={Reference sliderA}, Path=Value}"
+               Grid.Row="1" Grid.Column="1"/>
+        <Slider x:Name="sliderA" Value="1"
+                Grid.Row="1" Grid.Column="2" Minimum="0" Maximum="1"
+                ThumbColor="Black" MaximumTrackColor="Black" MinimumTrackColor="Gray"
+                ValueChanged="sliderA_ValueChanged"
+                />
+
+        <Label Text="顏色 R" Grid.Row="2"/>
+        <Label Text="{Binding Source={Reference sliderR}, Path=Value}"
+               TextColor="Red" Grid.Row="2" Grid.Column="1"/>
+        <Slider x:Name="sliderR" Value="0"
+                Grid.Row="2" Grid.Column="2" Minimum="0" Maximum="1"
+                ThumbColor="Red" MaximumTrackColor="Black" MinimumTrackColor="Gray"
+                ValueChanged="sliderR_ValueChanged"
+                />
+
+        <Label Text="顏色 G" Grid.Row="3"/>
+        <Label Text="{Binding Source={Reference sliderG}, Path=Value}"
+               TextColor="Green" Grid.Row="3" Grid.Column="1"/>
+        <Slider x:Name="sliderG" Value="0"
+                Grid.Row="3" Grid.Column="2" Minimum="0" Maximum="1"
+                ThumbColor="Green" MaximumTrackColor="Black" MinimumTrackColor="Gray"
+                ValueChanged="sliderG_ValueChanged"
+                />
+
+        <Label Text="顏色 B" Grid.Row="4"/>
+        <Label Text="{Binding Source={Reference sliderB}, Path=Value}"
+               TextColor="Blue" Grid.Row="4" Grid.Column="1"/>
+        <Slider x:Name="sliderB" Value="0"
+                Grid.Row="4" Grid.Column="2" Minimum="0" Maximum="1"
+                ThumbColor="Blue" MaximumTrackColor="Black" MinimumTrackColor="Gray"
+                ThumbImage="path.png"
+                ValueChanged="sliderB_ValueChanged"
+                />
+
+    </Grid>
+
+</ContentPage>
