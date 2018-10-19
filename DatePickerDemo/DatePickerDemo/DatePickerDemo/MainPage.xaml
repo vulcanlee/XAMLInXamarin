@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatePickerDemo"
+             x:Class="DatePickerDemo.MainPage">
+
+    <StackLayout>
+        <Label Text="有限制日期" />
+        <DatePicker 
+            MaximumDate="2018/10/28" MinimumDate="2018/10/17"/>
+        <Label Text="指定日期格式" />
+        <DatePicker 
+            MaximumDate="2018/10/28" MinimumDate="2018/10/17"
+            Format="yyyy年MM月dd日"/>
+        <Label Text="日期選取器觸發事件" />
+        <DatePicker x:Name="datepicker"
+            Format="yyyy年MM月dd日"
+            DateSelected="datepicker_DateSelected"
+            />
+        <Label x:Name="labelDate"
+               FontSize="24" TextColor="Red"/>
+
+        <Label Text="選取時間" />
+        <TimePicker 
+            />
+        <Label Text="指定時間格式" />
+        <TimePicker 
+            Format="HH時mm分ss秒"/>
+    </StackLayout>
+
+</ContentPage>
