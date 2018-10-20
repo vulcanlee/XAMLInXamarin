@@ -107,16 +107,17 @@ namespace ListViewDemo
             };
         }
 
-        private void listview1_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void listview1_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var fooItem = e.Item as DataItem;
-            DisplayAlert("通知", $"您選取了 {fooItem.Title}", "確定");
+            await DisplayAlert("通知", $"您選取了 {fooItem.Title}", "確定");
+            //listview1.SelectedItem = null;
         }
 
-        private void listview2_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void listview2_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var fooItem = e.Item as DataItem;
-            DisplayAlert("通知", $"您確定要購買 {fooItem.Title} ?", "確定");
+            await DisplayAlert("通知", $"您確定要購買 {fooItem.Title} ?", "確定");
         }
 
         private void listview2_Refreshing(object sender, EventArgs e)
