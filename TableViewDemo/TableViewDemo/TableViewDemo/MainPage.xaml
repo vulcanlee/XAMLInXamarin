@@ -5,28 +5,38 @@
              x:Class="TableViewDemo.MainPage">
 
     <StackLayout>
-        <TableView Intent="Settings">
+        <TableView Intent="Settings" HasUnevenRows="True">
             <TableRoot>
                 <TableSection Title="執行選項">
-                    <SwitchCell Text="啟用推播通知" />
+                    <SwitchCell x:Name="scPush" Text="啟用推播通知" />
                     <SwitchCell Text="自動更新檢查" On="true" />
                     <SwitchCell Text="自動登入" On="true"/>
                     <SwitchCell Text="自動加好友" On="true" />
                 </TableSection>
                 <TableSection Title="個人資訊設定">
-                    <EntryCell Label="姓名" Placeholder="請輸入您的姓名" />
+                    <EntryCell x:Name="ecName" Label="姓名" Placeholder="請輸入您的姓名" />
                     <EntryCell Label="電話" Text="0912345678" />
                     <EntryCell Label="帳號" Text="vulcan lee" />
+                    <ImageCell ImageSource="https://developer.xamarin.com/demo/IMG_1408.JPG?height=300"
+                               Text="美麗的住宿地點"
+                               Detail="可以參加各種不同活動與烤肉派對"/>
                 </TableSection>
                 <TableSection Title="QR Code 邀請">
                     <ViewCell>
-                            <Button Text="重新產生" 
-                                HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Button x:Name="btnGenQRCode" Text="重新產生" 
+                                HorizontalOptions="Center" VerticalOptions="Center"
+                                    Clicked="btnGenQRCode_Clicked"/>
                     </ViewCell>
                     <ViewCell>
-                            <BoxView Color="Gray"
+                            <BoxView Color="LightBlue"
                                      HorizontalOptions="Center" VerticalOptions="Center"
-                                     WidthRequest="50" HeightRequest="50"/>
+                                     WidthRequest="100" HeightRequest="100"/>
+                    </ViewCell>
+                    <ViewCell>
+                        <DatePicker />
+                    </ViewCell>
+                    <ViewCell>
+                        <TimePicker />
                     </ViewCell>
                 </TableSection>
             </TableRoot>

@@ -13,5 +13,13 @@ namespace TableViewDemo
         {
             InitializeComponent();
         }
+
+        private void btnGenQRCode_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("資訊", "啟用推播通知:"+
+                scPush.On + Environment.NewLine+
+                "姓名:" +
+                ecName.Text, "確定");
+        }
     }
 }
