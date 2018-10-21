@@ -5,13 +5,23 @@
              x:Class="WebViewDemo.MainPage">
 
     <StackLayout>
-        <WebView
+        <Entry x:Name="entryUrl" Text="https://www.google.com"/>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnNavi" Text="顯示"
+                Clicked="btnNavi_Clicked"/>
+            <Button x:Name="btnNaviF" Text="往前"
+                    Clicked="btnNaviF_Clicked"/>
+            <Button x:Name="btnNaviB" Text="往後"
+                    Clicked="btnNaviB_Clicked"/>
+        </StackLayout>
+        <WebView x:Name="webviewOnline"
             VerticalOptions="FillAndExpand"
             Source="https://visualstudio.microsoft.com/zh-hant/xamarin/"
             Navigating="WebView_Navigating"
             Navigated="WebView_Navigated"/>
         <Label x:Name="labelNavigating"/>
         <Label x:Name="labelNavigated"/>
+        <BoxView Color="Gray" HeightRequest="3" HorizontalOptions="Fill"/>
         <WebView x:Name="webview"
             VerticalOptions="FillAndExpand"
             />

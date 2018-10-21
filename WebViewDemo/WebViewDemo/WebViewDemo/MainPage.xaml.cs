@@ -27,5 +27,26 @@ namespace WebViewDemo
         {
             labelNavigated.Text = $"Navigated time {DateTime.Now}";
         }
+
+        private void btnNavi_Clicked(object sender, EventArgs e)
+        {
+            webviewOnline.Source = (new Uri( entryUrl.Text));
+        }
+
+        private void btnNaviF_Clicked(object sender, EventArgs e)
+        {
+            if(webviewOnline.CanGoForward)
+            {
+                webviewOnline.GoForward();
+            }
+        }
+
+        private void btnNaviB_Clicked(object sender, EventArgs e)
+        {
+            if (webviewOnline.CanGoBack)
+            {
+                webviewOnline.GoBack();
+            }
+        }
     }
 }
