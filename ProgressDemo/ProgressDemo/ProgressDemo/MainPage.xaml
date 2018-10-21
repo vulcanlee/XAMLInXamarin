@@ -42,7 +42,7 @@
                 <Grid x:Name="gdMask10">
                     <BoxView Color="Black" Opacity="0.3"/>
                     <ProgressBar x:Name="progbar10" Progress="0.3"
-                   Margin="15,0"
+                   Margin="15,0" ProgressColor="LightBlue"
                    HorizontalOptions="Fill" VerticalOptions="Center"/>
                 </Grid>
             </Grid>
@@ -56,7 +56,7 @@
                 <Grid x:Name="gdMask01">
                     <BoxView Color="Black" Opacity="0.3"/>
                     <ProgressBar x:Name="progbar01" Progress="0.3"
-                   Margin="15,0"
+                   Margin="15,0" ProgressColor="LightGreen"
                    HorizontalOptions="Fill" VerticalOptions="Center"/>
                 </Grid>
             </Grid>
@@ -70,7 +70,7 @@
                 <Grid x:Name="gdMask11">
                     <BoxView Color="Black" Opacity="0.3"/>
                     <ProgressBar x:Name="progbar11" Progress="0.3"
-                   Margin="15,0"
+                   Margin="15,0" ProgressColor="LightYellow"
                    HorizontalOptions="Fill" VerticalOptions="Center"/>
                 </Grid>
             </Grid>
