@@ -20,6 +20,7 @@
 
         <SearchBar x:Name="searchbar"
                    Placeholder="請輸入要選擇的項目"
+                   CancelButtonColor="Red"
                    SearchButtonPressed="searchbar_SearchButtonPressed"/>
     </StackLayout>
 

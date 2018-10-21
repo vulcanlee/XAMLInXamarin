@@ -15,21 +15,6 @@ namespace PickerDemo
         public int Id { get; set; }
         public string Name { get; set; }
     }
-    class MainPageViewModel : INotifyPropertyChanged
-    {
-        public ObservableCollection<DataItem> MenuItems { get; set; }
-
-        #region INotifyPropertyChanged Implementation
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged == null)
-                return;
-
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
-    }
     public partial class MainPage : ContentPage
     {
         public List<DataItem> Picker1Source { get; set; }
