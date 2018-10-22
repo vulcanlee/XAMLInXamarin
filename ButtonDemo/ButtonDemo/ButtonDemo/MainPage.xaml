@@ -5,13 +5,6 @@
              x:Class="ButtonDemo.MainPage">
 
     <StackLayout>
-        <Button Text="按鈕的外觀 圓角與顏色"
-                HorizontalOptions="Center"
-                WidthRequest="200"
-                BorderColor="Red" BorderWidth="5" 
-                CornerRadius="15"
-                FontSize="24" TextColor="Blue"
-                />
         <Button Text="按鈕啟用"
                 HorizontalOptions="Center"
                 WidthRequest="200"
@@ -20,16 +13,52 @@
                 HorizontalOptions="Center"
                 WidthRequest="200" IsEnabled="False"
                 />
-        <Button Text="上方有圖片按鈕" 
-                WidthRequest="250" HorizontalOptions="Center"
+        <Button Text="按鈕的外觀 圓角與顏色"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                BorderColor="Red" BorderWidth="5" 
+                CornerRadius="15"
+                FontSize="24" TextColor="Blue"
+                />
+        <StackLayout Orientation="Horizontal"
+                     Spacing="0">
+            <Button Text="左邊圖片" 
+                ContentLayout="Left,10">
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android, iOS" Value="xamarin.png"/>
+                        <On Platform="UWP" Value="Assets/xamarin.png"/>
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
+            <Button Text="右邊圖片" 
+                ContentLayout="Right,10">
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android, iOS" Value="xamarin.png"/>
+                        <On Platform="UWP" Value="Assets/xamarin.png"/>
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
+            <Button Text="上方圖片" 
                 ContentLayout="Top,10">
-            <Button.Image>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android, iOS" Value="xamarin.png"/>
-                    <On Platform="UWP" Value="Assets/xamarin.png"/>
-                </OnPlatform>
-            </Button.Image>
-        </Button>
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android, iOS" Value="xamarin.png"/>
+                        <On Platform="UWP" Value="Assets/xamarin.png"/>
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
+            <Button Text="下方圖片" 
+                ContentLayout="Bottom,10">
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android, iOS" Value="xamarin.png"/>
+                        <On Platform="UWP" Value="Assets/xamarin.png"/>
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
+        </StackLayout>
         <Button Text="命令綁定按鈕"
                 BackgroundColor="LightSkyBlue"
                 Command="{Binding ButtonCommand}"/>
@@ -40,7 +69,7 @@
             <Label Text="切換啟用顏色"/>
             <Switch x:Name="swEnableColor"
                     Toggled="swEnableColor_Toggled"/>
-            <Switch x:Name="sw"/>
+            <Switch x:Name="sw" IsToggled="True"/>
         </StackLayout>
     </StackLayout>
 
